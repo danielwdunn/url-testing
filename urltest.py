@@ -3,7 +3,6 @@ import csv
 from pandas import read_csv
 
 #Set List of URLs to Audit in CSV Format. Column 1 = URL, Column 2 = Category
-
 data = read_csv('masterlist.csv')
 
 #Set Variables
