@@ -28,22 +28,22 @@ for s, c in zip(sites,category):
             results_writer = csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             results_writer.writerow([s,c,response])
     except requests.exceptions.HTTPError as exception:
-        print(s,c,'httperror')
+        print(s,c,'HTTP Error')
         with open('results.csv', mode='a', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            results_writer.writerow([s,c, 'httperror'])
+            results_writer.writerow([s,c, 'HTTP Error'])
     except requests.exceptions.ConnectionError as e:
-        print(s,c,'connection error')
+        print(s,c,'Connection Error')
         with open('results.csv', mode='a', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            results_writer.writerow([s,c, 'connection error'])
+            results_writer.writerow([s,c, 'Connection Error'])
     except requests.exceptions.Timeout as timeout:
-        print(s,c,'timeout')
+        print(s,c,'Timeout Error')
         with open('results.csv', mode='a', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            results_writer.writerow([s,c, 'timeout error'])
+            results_writer.writerow([s,c, 'Timeout Error'])
     except requests.exceptions.TooManyRedirects as results_file:
-        print(s, c, 'too many redirects')
+        print(s, c, 'Too many redirects')
         with open('results.csv', mode='a', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             results_writer.writerow([s, c, 'Too many redirects'])
