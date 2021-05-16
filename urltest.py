@@ -2,9 +2,9 @@ import requests
 import csv
 from pandas import read_csv
 
-#Set List of URLS to Audit in CSV Format. Column 1 = URL, Column 2 = Category
-listDirectory = 'C:/projects/WebAccessAudit/lists/'
-data = read_csv(listDirectory + 'masterlist_continued.csv')
+#Set List of URLs to Audit in CSV Format. Column 1 = URL, Column 2 = Category
+
+data = read_csv('masterlist.csv')
 
 #Set Variables
 sites = data['url'].tolist()
