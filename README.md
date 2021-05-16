@@ -5,4 +5,7 @@ A simple Python script and collection of URLs to test URL filtering and blocking
 
 ### Prerequisites
 
-Python 3+
+Python 3+ with the following libraries:
+* requests
+* csv
+* pandas
